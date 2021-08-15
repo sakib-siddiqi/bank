@@ -29,12 +29,9 @@
 }
 body{
     background-color: var(--bg);
-}
-.container{
-    height: 100vh;
     min-height: 100vh;
-    
 }
+
 .heading{
     padding: 1rem 2rem;
     border-radius: 5px;
