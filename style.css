@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: white;
+}
+:root{
+    --bg:#00ADB5;
+    --white:#fff;
+    --dark:#393E46;
+    --b-s-big: 5px 5px 10px 0px #00000025,-5px -5px 10px 0px #FFFFFF35;
+    --b-s-sm:-2px -2px 3px rgba(255, 255, 255, 0.1), 2px 2px 3px rgba(0, 0, 0, 0.1);
+    --b-s-ins:inset -2px -2px 5px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.j-c-s-b{
+    justify-content: space-around;
+}
+.column{
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+body{
+    background-color: var(--bg);
+}
+.container{
+    height: 100vh;
+    min-height: 100vh;
+    
+}
+.heading{
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: var(--b-s-big);
+    margin-bottom: 2rem;
+}
+.box{
+    padding: 2rem;
+    box-shadow: var(--b-s-big);
+}
+.box h2{
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+form input{
+    margin: 0.5rem auto;
+    padding: 1rem 1rem;
+    background: var(--bg);
+    box-shadow: var(--b-s-big);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 16px;
+}
+form input:nth-child(1),input:nth-child(2){
+    box-shadow: var(--b-s-ins);
+}
+form input:nth-child(1):focus,input:nth-child(2):focus{
+    background: var(--dark);
+}
+form input[type="submit"]{
+    margin-top: 1.5rem;
+    padding: 0.6rem 2rem;
+}
+form input[type="submit"]:hover{
+   background: var(--dark);
+}
+
