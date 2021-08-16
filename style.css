@@ -44,7 +44,7 @@ section,header{
 .grid-3{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 2rem;
 }
 .grid-2{
@@ -63,7 +63,7 @@ body{
 }
 /* heading */
 .heading{
-    padding: 1rem 2rem;
+    padding: 1rem 0.5rem;
     border-radius: 5px;
     box-shadow: var(--b-s-big);
     margin-bottom: 2rem;
@@ -84,7 +84,7 @@ body{
 .box h2{
     font-size: 2rem;
     letter-spacing: 1px;
-    line-height: 2rem;
+    line-height: 2;
 }
 /* inputs */
 .inputsection{
@@ -141,4 +141,5 @@ footer{
     .inputsection label{
         flex-direction: column;
     }
+    
   }
