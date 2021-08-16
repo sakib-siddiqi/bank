@@ -15,7 +15,7 @@ dipoBtn.addEventListener("click", function () {
     let balance = parseFloat(balanceMoney.innerText);
     let newBalance = parseFloat(diposite.value);
     let oldBalance = parseFloat(dipoMoney.innerText);
-    if (newBalance < 0) {
+    if (newBalance < 0 || diposite.value.length==0) {
         clearFuild([diposite])
         diposite.style.borderColor = '#FF4848';
     }
