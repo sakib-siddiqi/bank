@@ -7,43 +7,43 @@ let withdrow = document.querySelector("#withdrow");
 let withdrowMoney = document.querySelector(".withdrowMoney");
 let balanceMoney = document.querySelector(".balanceMoney");
 //clear fuild
- function clearFuild(fuild){
-    fuild.forEach(function(e){e.value=""});
+function clearFuild(fuild) {
+    fuild.forEach(function (e) { e.value = "" });
+}
+// calculation function
+function calculateIT(balance, newAmount, oldAmount) {
+    let balanceValue = parseFloat(balance.innerText);
+    let newAmountValue = parseFloat(newAmount.value);
+    let oldAmountValue = parseFloat(oldAmount.innerText);
+
+    if(newAmountValue>0){
+        if(newAmount==withdrow){
+            let totalBalance = balanceValue - newAmountValue;
+            let total = newAmountValue + oldAmountValue;
+            oldAmount.innerText = total;
+            balance.innerText = totalBalance;
+        }else{
+            let totalBalance = balanceValue + newAmountValue;
+            let total = newAmountValue + oldAmountValue;
+            oldAmount.innerText = total;
+            balance.innerText = totalBalance;
+        }
+        newAmount.style.borderColor = '#00ADB5';
+        clearFuild([newAmount]);
+    }
+    else if(newAmount.value.length==0 || newAmountValue<0){
+        newAmount.style.borderColor = '#FF4848';
+       setTimeout(() => {
+        newAmount.style.borderColor = '#00ADB5';
+       }, 200);
+        clearFuild([newAmount]);
+    }
 }
 // diposite
-dipoBtn.addEventListener("click", function () {
-    let balance = parseFloat(balanceMoney.innerText);
-    let newBalance = parseFloat(diposite.value);
-    let oldBalance = parseFloat(dipoMoney.innerText);
-    if (newBalance < 0 || diposite.value.length==0) {
-        clearFuild([diposite])
-        diposite.style.borderColor = '#FF4848';
-    }
-    else {
-        let totalBalance = balance + newBalance;
-        let totalDipo = newBalance + oldBalance;
-        dipoMoney.innerText = totalDipo; 
-        balanceMoney.innerText=totalBalance;
-        diposite.style.borderColor = '#00ADB5';
-        clearFuild([diposite])
-    }
-})
+dipoBtn.addEventListener("click",function(){
+    calculateIT(balanceMoney,diposite,dipoMoney)
+});
 // withdrow
-withdrowBtn.addEventListener("click", function () {
-    let newBalance = parseFloat(withdrow.value);
-    let oldBalance=parseFloat(withdrowMoney.innerText)
-    let balance = parseFloat(balanceMoney.innerText);
-    if (newBalance>0) {
-        let totalwithdrow = oldBalance + newBalance;
-        let totalBalance = balance - newBalance;
-        withdrowMoney.innerText = totalwithdrow;
-        balanceMoney.innerText = totalBalance;
-        withdrow.style.borderColor = '#00ADB5';
-        clearFuild([withdrow])
-    }
-    else {
-        withdrow.style.borderColor = '#FF4848';
-        clearFuild([withdrow])
-    }
-
-})
+withdrowBtn.addEventListener("click",function(){
+    calculateIT(balanceMoney,withdrow,withdrowMoney)
+});
