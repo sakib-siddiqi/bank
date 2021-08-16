@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,66 @@
     <title>UR withdrow</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <div class="container center column wrap">
-        <h1 class="heading text-white ">UR Banking Dashboard</h1>
+    <header class="container">
+        <h1 class="heading">Dash<span class="dark">board</span></h1>
+    </header>
+    <section class="container center">
         <div class="grid-3">
             <div class="box">
                 <h3>Deposit</h3>
-                <h1>$00</h1>
+                <h2>$ <span class="dark dipoMoney">000</span>
+                </h2>
             </div>
             <div class="box">
                 <h3>Withdraw</h3>
-                <h1>$00</h1>
+                <h2>$ <span class="dark withdrowMoney">000</span>
+                </h2>
             </div>
             <div class="box">
                 <h3>Balance </h3>
-                <h1>$100</h1>
+                <h2>$ <span class="dark balanceMoney">1230</span>
+                </h2>
             </div>
         </div>
+    </section>
+    <section class="container center wrap">
+        <h1 class="heading"><span class="dark">Diposite</span> or <span class="dark">Withdraw</span></h1>
+        <div class="grid-2">
+            <div class="box dark">
+                <h2>Diposite</h2>
+                <div class="inputsection center wrap column">
+                    <label for="dipo" class="center">
+                        <span class="inputIcon">
+                            <img src="./Image/dollar.png" alt="">
+                        </span>
+                        <input type="number" name="" id="dipo" placeholder="Amount">
+                    </label>
+                    <input type="submit" id="dipoBtn" value="Diposite">
+                </div>
+            </div>
+            <div class="box dark">
+                <h2>Withdrow</h2>
+                <div class="inputsection center wrap column">
+                    <label for="withdrow" class="center">
+                        <span class="inputIcon">
+                            <img src="./Image/dollar.png" alt="">
+                        </span>
+                        <input type="number" name="" id="withdrow" placeholder="Amount">
+                    </label>
+                    <input type="submit" id="withdrowBtn" value="Withdrow">
+                </div>
+            </div>
+        </div>
+    </section>
+
     </div>
+
+    <!-- =========== -->
+    <!-- =========== -->
+    <!-- =========== -->
+    <script src="./js/banking.js"></script>
 </body>
+
 </html>

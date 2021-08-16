@@ -28,6 +28,7 @@ dipoBtn.addEventListener("click", function () {
         clearFuild([diposite])
     }
 })
+// withdrow
 withdrowBtn.addEventListener("click", function () {
     let newBalance = parseFloat(withdrow.value);
     let oldBalance=parseFloat(withdrowMoney.innerText)

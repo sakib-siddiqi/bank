@@ -11,22 +11,31 @@
 </head>
 
 <body>
-    <div class="container center column wrap">
-        <h1 class="heading text-white ">UR Bank</h1>
-        <div class="box center wrap column">
-            <div class="img">
-                <img src="./Image/logo.png" alt="">
-            </div>
+    <header class="container">
+        <h1 class="heading">UR <span class="dark">Bank</span></h1>
+    </header>
+    <section class="container box">
+        <div class="center column wrap">
+            <img src="./Image/logo.png" alt="">
             <h2>Login</h2>
-            <div class="center wrap column">
-                <input type="email" name="" id="emailInput" placeholder="email" required>
-                <input type="password" name="" id="passInput" placeholder="password" required>
-                <input type="submit" id="submitBtn" value="Login">
-            </div>
+        </div>
+        <div class="inputsection center wrap column">
+            <label for="emailInput" class="center">
+                <span class="inputIcon">
+                    <img src="./Image/user.png" alt="">
+                </span>
+                <input type="email" name="" id="emailInput" placeholder="E-mail">
+            </label>
+            <label for="passInput" class="center">
+                <span class="inputIcon">
+                    <img src="./Image/pass.png" alt="">
+                </span>
+                <input type="password" name="" id="passInput" placeholder="password">
+            </label>
+            <input type="submit" id="submitBtn" value="Login">
         </div>
 
-    </div>
-
+    </section>
     <!-- =========== -->
     <!-- =========== -->
     <!-- =========== -->

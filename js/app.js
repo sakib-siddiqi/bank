@@ -10,7 +10,7 @@ submit.addEventListener('click',function(){
         console.log("wrong")
     }
 })
-// clear fuild
+// clear fuild 
 function clearFuild(fuild){
     fuild.forEach(function(e){e.value=""});
 }
