@@ -72,7 +72,7 @@ body{
 }
 
 .box{
-    padding:3rem 4rem;
+    padding:3rem 0.5rem;
     box-shadow: var(--b-s-big);
 }
 .box h3{
@@ -83,8 +83,12 @@ body{
 .box h2{
     font-size: 2rem;
     letter-spacing: 1px;
+    line-height: 2rem;
 }
 /* inputs */
+.inputsection{
+    padding: 3rem 0;
+}
 div input{
     margin: 0.5rem auto;
     padding: 1rem 1rem;
@@ -111,7 +115,7 @@ div input[type="submit"]:hover{
    background: var(--dark);
 }
 .inputIcon{
-    margin: 1rem;
+    margin: 0.7rem;
 }
 #dipo,#withdrow{
     background: var(--white);
@@ -121,6 +125,9 @@ div input[type="submit"]:hover{
 #dipoBtn,#withdrowBtn{
     background: var(--bg);
     color: var(--white);
+}
+input.input {
+    width: 100%;
 }
 footer{
     bottom: 0;
